@@ -90,7 +90,7 @@ html {
 }
 
 .btn {
-    min-width: 142px;
+    min-width: 124px;
     height: 34px;
     background-color: var(--white-color);
     border: none;
