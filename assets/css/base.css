@@ -7,6 +7,7 @@
     --navbar-height: 42px;
     --header-height: 120px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --star-gold-color: #ffce3e;
 }
 
 * {
@@ -147,6 +148,7 @@ html {
 }
 /* selection */
 .select-input {
+    z-index: 1;
     height: 34px;
     padding: 0 12px;
     border-radius: 2px;
@@ -213,3 +215,42 @@ html {
     padding: 6px 0;
 }
 
+/* pagination */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item{
+    margin: 0 16px;
+}
+
+.pagination-item__link{
+    --height: 30px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #939393;
+    min-width: 40px;
+    line-height: var(--height);
+    height: var(--height);
+    display: block;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.pagination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    background-color: #ed5c3f;
+}
+
+.pagination-item__icon{
+    font-size: 1.4rem;
+}
