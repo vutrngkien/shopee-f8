@@ -1,0 +1,143 @@
+/* modile and tablet */
+@media (max-width: 1023px){
+    :root {
+        --navbar-height: 0px;
+        --header-height: 68px;
+    }
+    .header{
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10px;
+    }
+    .app_container{
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header__cart-list{
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+
+    .header__cart-list::before{
+        display:none;
+    }
+    .header__sort-bar{
+        display: flex;
+    }
+    .app_content{
+        padding-top: 10px;
+    }
+    .mobile-category{
+        display: block;
+    }
+    .footer__heading{
+        margin: 10px 0;
+        display: block;
+    }
+}
+
+/* tablet */
+@media(min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header__cart {
+        width: 80px;
+        text-align: right;
+    }
+    .header__cart-notice {
+        right: 10px;
+    }
+    .footer__download-apps{
+        margin-left: 8px;
+    }
+    
+}
+
+/* mobile */
+@media(max-width: 739px){
+    .hide-on-mobile {
+        display: none;
+    }
+    .header-with-search{
+        justify-content: space-between;
+    }
+    .header__search-checkbox:checked ~ .header__search{
+        display: flex;
+    }
+    .header__logo,.header__cart{
+        width: unset;
+    }
+    .header__cart-notice{
+        right: 0;
+        top: -8px;
+    }
+    .header__search{
+        position: fixed;
+        top: calc(var(--header-height));
+        width: 100%;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        z-index: 1;
+        padding: 0 16px;
+        animation: mobileSearchSideIn ease-in-out 0.2s;
+        display: none;
+    }
+
+    .header__search-history{
+        box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: calc(var(--header-height) + var(--header-search-bar));
+    }
+    @keyframes mobileSearchSideIn {
+            from{
+                left: -100%;
+            }
+            to {
+                left: 0;
+            }
+    }
+    .header__search-option{
+        width: 125px;
+    }
+    .pagination-item__link {
+        --height: 28px;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #939393;
+        min-width: 36px;
+        line-height: var(--height);
+        height: var(--height);
+        display: block;
+        text-align: center;
+        border-radius: 2px;
+    }
+    .pagination-item {
+        margin: 0;
+    }
+    .app_content{
+        margin: 0 4px;
+    }
+    .header__mobile-search{
+        display: block;
+    }
+    .header__logo-img{
+        width: 110px;
+    }
+    .footer__content{
+        padding: 0 16px;
+    }
+}
