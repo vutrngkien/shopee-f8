@@ -642,7 +642,7 @@
 
 .header__cart-notice {
     position: absolute;
-    top: 2px;
+    top: -8px;
     right: 46px;
     padding: 1px 6px;
     font-size: 1.4rem;
