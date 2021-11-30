@@ -599,8 +599,8 @@
 
 .header__cart-list {
     position: absolute;
-    top: calc(100% + 1px);
-    right: 50px;
+    top: calc(100% + 11px);
+    right: 53px;
     background-color: var(--white-color);
     width: 400px;
     border-radius: 2px;
@@ -701,7 +701,10 @@
     border-radius: 2px;
     margin-right: 3px;
     outline: none;
-    width: 60px;
+    width: 60px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__search-btn-icon{
